@@ -1,0 +1,132 @@
+/* Блок "Баннер-2" */
+.banner-bottom {
+	background: url(../img/Banner-bottom/Banner-bottom.svg);
+	background-blend-mode: multiply;
+	background-color: rgba(0, 0, 0, .5);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Раздел "Заголовок с линеей" */
+.banner-bottom__block {
+	margin: 0 auto;
+	padding-top: 61.11px;
+	padding-bottom: 61.11px;
+}
+.banner-bottom__heading {
+	display: flex;
+	flex-flow: column nowrap; 
+}
+.banner-bottom__title {
+	height: 150px;
+	justify-content: center;
+}
+.banner-bottom__title h2 {
+	font: normal normal 400 36px/42.26px "Raleway";
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	}
+.banner-bottom__line {
+	width: 170px;
+	border-bottom: 1px solid #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+}
+.banner-bottom__subtitle p {
+	font: normal normal 400 18px/21px "Raleway";
+	text-align: center;
+	color: #FFFFFF;
+}
+
+/* Раздел "Вся кнопка" */
+.banner-bottom__all-buttom {
+	margin: 0 auto;
+}
+.banner-bottom__buttom {
+	height: 112px;
+	display: flex;
+	justify-content: center;
+}
+.banner-bottom__buttom input {
+	font: normal normal 600 18px/24.51px "Open Sans";
+	color:#FFFFFF;
+	width: 370px;
+	height: 58px;
+	border: 2px solid #FFFFFF;
+	background-color: transparent;
+	padding: 0px;
+}
+.banner-bottom__buttom input:hover {
+	color:#EC7979;
+	border: 2px solid #EC7979;
+	cursor: pointer;
+}
+.banner-bottom__buttom input:active {
+	color:#FFFFFF;
+	border: 2px solid #AB4949;
+	background-color: #AB4949;
+	cursor: pointer;
+}
+
+
+@media only screen and (min-width: 1170px) { 
+	.banner-bottom__block, 
+	.banner-bottom__all-buttom {
+		width: 1170px;
+	}
+}
+@media only screen and (min-width: 1022px) and (max-width: 1170px)  { 
+	.banner-bottom__block, 
+	.banner-bottom__all-buttom {
+		width: 992px;
+	}
+
+	.banner-bottom__title { /* Раздел "Заголовок с линеей" */
+		height: 120px;
+		justify-content: center;
+	}
+	.banner-bottom__title h2 {
+		font: normal normal 400 24px/28.18px "Raleway";
+	}
+	.banner-bottom__line {
+		width: 142px;
+	}
+	.banner-bottom__subtitle p {
+		font: normal normal 400 14px/16.44px "Raleway";
+	}
+
+	.banner-bottom__buttom input { /* Раздел "Вся кнопка" */
+		width: 318px;
+		height: 58px;
+	}
+}
+@media only screen and (min-width: 288px) and (max-width: 1023px) {
+	.banner-bottom {
+		background-color: rgba(0, 0, 0, .3);
+	}
+	.banner-bottom__block, 
+	.banner-bottom__all-buttom {
+		width: 288px;
+	}
+	.banner-bottom__title h2 {
+		font: normal normal 400 24px/28.18px "Raleway";
+	}
+
+	.banner-bottom__line { /* Раздел "Заголовок с линеей" */
+		width: 134px;
+	}
+	.banner-bottom__subtitle p {
+		font: normal normal 400 14px/16px "Raleway";
+	}
+
+	.banner-bottom__buttom input { /* Раздел "Вся кнопка" */
+		width: 287px;
+		height: 50px;
+	}
+}
+
+
+

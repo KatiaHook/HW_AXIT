@@ -1,0 +1,182 @@
+/* Блок "Вкладки" */
+.tabs {
+	width: 100%;
+	height: 540px;
+	margin-top: 60px;
+}
+
+/* Раздел "Линия вкладок + Вкладки-содержимое" */
+/* Настройка линии вкладок */
+.tabs__conteiners {
+	margin: 0 auto;
+}
+.tab__input { /* Удаление Radio-Button */
+	display: none;
+}
+.tab-card__content { /* Отображение контента ОДНОЙ вкладки */
+	display: none;
+	height: 498.4px;
+	padding-left: 98.4px;
+	border: 1px solid #C6CBCD;
+} 
+#tab-1:checked ~ #tabs-content-1,
+#tab-2:checked ~ #tabs-content-2,
+#tab-3:checked ~ #tabs-content-3 {  /* Переключение вкладки */
+	display: block;
+}
+.tab__title { /* Настройка внешнего вида вкладок */
+	font: normal normal 400 14px/19.07px "Open Sans";
+	margin-bottom: -1px; 
+	border-radius: 5px 5px 0 0;
+	display: inline-block;
+	cursor: pointer;
+}
+.tab__text-title { /* Настройка НЕ активной вкладки */
+	width: 184px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+#tab-1:checked ~ .tab-label-1,
+#tab-2:checked ~ .tab-label-2,
+#tab-3:checked ~ .tab-label-3 { /* Настройка активной вкладки */
+	background: #dafb57;
+	width: 194px;
+	height: 40px;
+	padding-left: 9px;
+	border-bottom-color: #ffffff;
+} 
+
+/* Настройка содержимого вкладок */
+.tab-content__title {
+	display: flex;
+	font: normal normal 700 30px/40.85px "Open Sans";
+	text-align: left;
+	width: 570px;
+	padding: 41.58px 0px;
+	margin: 0px;
+	} 
+.tab-content__text {
+	display: flex;
+	font: normal normal 400 18px/21px "Raleway";
+	text-align: left;
+	width: 570px;
+	padding: 0px;
+	margin: 0px;
+}
+.tab-content__buttom {
+	font: normal normal 600 18px/24.51px "Open Sans";
+	color: #ffffff; 
+	background-color: #EC7979;
+	padding: 16.75px 91.03px;
+	border: 0px;
+	margin: 0px;
+	margin-top: 45px; 
+}
+.tab-content__buttom:hover {
+	background-color: #AB4949;
+	cursor: pointer;
+}
+.tab-content__buttom:active {
+	background-color: #EC7979;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+.tab-content__image {
+	width: 470px;
+	height: 500px;
+	margin-left: 600px;
+	margin-top: -439px;
+}
+
+
+@media only screen and (min-width: 1170px) { 
+	.tabs__conteiners {
+		max-width: 1170px;
+	}
+}
+@media only screen and (min-width: 1022px) and (max-width: 1170px)  { 
+	.tabs {
+		height: 425px;
+	}
+	.tabs__conteiners {
+		width: 992px;
+	}
+	
+	.tab-card__content { /* Настройка линии вкладок */
+		height: 383.4px;
+		padding-left: 88.4px;
+	} 
+	#tab-1:checked ~ .tab-label-1,
+	#tab-2:checked ~ .tab-label-2,
+	#tab-3:checked ~ .tab-label-3 {
+		width: 162px;
+		border-bottom-color: #ffffff;
+	} 
+	.tab__text-title {
+		width: 156px;
+	}
+
+	.tab-content__title { /* Настройка содержимого вкладок */
+		font: normal normal 700 24px/32.68px "Open Sans";
+		width: 482.89px;
+		padding: 28.17px 0px;
+		margin-bottom: 40px;
+		} 
+	.tab-content__text {
+		font: normal normal 400 14px/16px "Raleway";
+		width: 482.89px;
+	}
+	.tab-content__buttom {
+		padding: 16.75px 71.53px;
+	}
+	.tab-content__image {
+		width: 398.21px;
+		height: 385px;
+		margin-left: 506px;
+		margin-top: -344px;
+	}
+}
+@media only screen and (min-width: 288px) and (max-width: 1023px) {
+	.tabs {
+		height: 470px;
+		margin-bottom: 60px;
+	}
+	.tabs__conteiners {
+		width: 288px;
+	}
+
+	.tab-card__content { /* Настройка линии вкладок */
+		height: 468.4px;
+		padding-left: 20px;
+	} 
+	#tab-1:checked ~ .tab-label-1,
+	#tab-2:checked ~ .tab-label-2,
+	#tab-3:checked ~ .tab-label-3 {
+		width: 93px;
+	} 
+	.tab__text-title {
+		width: 89px;
+	}
+
+	.tab-content__title { /* Настройка содержимого вкладок */
+		font: normal normal 700 18px/24.51px "Open Sans";
+		text-align: center;
+		width: 242.74px;
+		padding: 31.5px 0px;
+		margin-bottom: 40px;
+		} 
+	.tab-content__text {
+		font: normal normal 400 13px/15.26px "Raleway";
+		text-align: center;
+		width: 243.74px;
+		height: 180px;
+	}
+	.tab-content__buttom {
+		padding: 12.75px 77.03px;
+		margin-top: 45px; 
+	}
+	.tab-content__image {
+		display: none;
+	}
+} 

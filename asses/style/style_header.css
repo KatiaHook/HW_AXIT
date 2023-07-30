@@ -1,0 +1,139 @@
+/* Блок "Шапка" */
+.header {
+	height: 75px;
+	background-color: #000000;
+}
+
+/* Раздел "Лого + Навигация" */
+.header__logo-burger-nav {
+	margin: 0 auto;
+	display: flex;
+}
+
+/* Настройка логотипа */
+.header__logo img { 
+	width: 183.1px;
+	height: 74.85px;
+}
+
+/* Настройка навигации */
+.header__nav {
+	display: flex;
+}
+.header__nav a {
+	height: 75px;
+	width: 113.8px;
+	font: normal normal 600 14px/19.07px "Open Sans";
+	color: #FFFFFF;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header__nav a:hover {
+	background-color: #EC7979;
+}
+.header__nav a:active {
+	background-color:#AB4949;
+}
+
+/* Настройка бургер-меню */
+.burger__input {
+	display: none;
+}
+.burger__lable{
+	height: 0px;
+}
+
+
+@media only screen and (min-width: 1170px) { 
+	.header__logo-burger-nav {
+		width: 1170px;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1170px)  { 
+	.header__logo-burger-nav {
+		width: 992px;
+		display: flex;
+	}
+}
+@media only screen and (min-width: 288px) and (max-width: 1023px) {
+	.header {
+		height: 56px;
+		min-width: 288px;
+	} 
+	.header__burger-nav {
+		display: flex;
+		justify-content: center;
+	}
+	.header__logo img {
+		width: 130px;
+		height: 56px;
+		display: flex;
+	} 
+	.header__nav {
+		background-color: #000000;
+		text-align: center;
+		width: 100%;
+		top: 56px; 
+		display: block;
+		position: fixed; 
+		visibility: hidden;
+		z-index: 2;
+	}  
+	.header__nav a {
+		height: 100%;
+		width: 100%;
+		display: block;
+		padding: 12px 0px;
+	}
+
+	.burger__lable { /* Настройка кнопки */
+		width: 55px;
+		height: 56px;
+		display: flex;
+		position: absolute;
+		cursor: pointer;
+	} 
+
+	.burger__lable > span,
+	.burger__lable > span::before,
+	.burger__lable > span::after { /* Добавление бургера */
+		content: '';
+		width: 24px;
+		height: 3px;
+		position: absolute;
+		top: 50%; 
+		margin-top: -1.5px;
+		left: 50%;
+		margin-left: -12px;
+		background-color: rgb(255, 255, 255);
+		display: block;
+		transition: 0.3s;
+	}
+	.burger__lable > span::before {
+		content: '';
+		transform: translateY(-8px);
+	}
+	.burger__lable > span::after {
+		content: '';
+		transform: translateY(8px);
+	}
+
+	#burger-1:checked ~ .burger__lable > span { /* Настройка крекстика */
+		background-color: rgba(255, 255, 255, 0);
+	}
+	#burger-1:checked ~ .burger__lable > span::before {
+		transform: rotate(45deg);
+	}
+	#burger-1:checked ~ .burger__lable > span::after {
+		transform: rotate(-45deg);
+	}
+	
+	#burger-1:checked ~ .header__nav { /* Отображение навигации */
+		visibility: visible;
+		left: 0;
+	}
+}

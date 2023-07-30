@@ -1,0 +1,18 @@
+/* РАЗОБРАТЬСЯ С РАСТОЯНИЕМ МЕЖДУ КАРТОЧКАМИ!!!!! */
+
+@font-face {
+	font-family: "Open Sans"; 
+	src: url("../fonts/OpenSans-VariableFont.ttf") format("truetype"); 
+	font-style: normal; 
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url("../fonts/Raleway-VariableFont.ttf") format("truetype"); 
+	font-weight: normal;
+}
+
+body {
+	padding: 0px;
+	margin: 0.15px auto; /* Выравнить по середине */
+}

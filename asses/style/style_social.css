@@ -1,0 +1,113 @@
+/* Блок "Социальные сети" */
+.social {
+	height: 140px;
+	background: #F8EFEF;
+}
+
+/* Раздел "Описание социальных сетей + Иконки" */
+.social__content-media {
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+}
+
+/* Подраздел "Описание социальных сетей" */
+.social__content {
+	width: 470px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+.social__content h4 {
+	font: normal normal 700 24px/32.68px "Open Sans";
+	color: #333333;
+	margin: 0px;
+	padding-bottom: 27.33px;
+}
+.social__content p {
+	font: normal normal 400 18px/21px "Raleway";
+	color: #86878B;
+	margin: 0px;
+}
+
+/* Подраздел "Иконки"  */
+.social__media {
+	width: 700px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	cursor: pointer;
+}
+.social__media a, img {
+	width: 70px;
+	height: 70px;
+}
+
+
+@media only screen and (min-width: 1170px) { 
+	.social__content-media {
+		max-width: 1170px;
+	}
+}
+@media only screen and (min-width: 1022px) and (max-width: 1170px)  { 
+	.social {
+		height: 105px;
+	}
+	.social__content-media {
+		width: 992px;
+	}
+
+	.social__content { /* Подраздел "Описание социальных сетей" */
+		width: 675.9px;
+		justify-content: center;
+	}
+	.social__content h4 {
+		font: normal normal 700 18px/24.51px "Open Sans";
+		padding-bottom: 20.5px;
+	}
+	.social__content p {
+		font: normal normal 400 14px/16.44px "Raleway";
+	}
+
+	.social__media { /* Подраздел "Иконки"  */
+		justify-content: space-between;
+	}
+	.social__media a, img {
+		width: 64px;
+		height: 64px;
+	}
+}
+@media only screen and (min-width: 288px) and (max-width: 1023px) {
+	.social {
+		height: 239px;
+	}
+	.social__content-media {
+		width: 288px;
+		flex-flow: column nowrap;
+	}
+
+.social__content { /* Подраздел "Описание социальных сетей"  */
+	width: 287px;
+	text-align: center;
+}
+.social__content h4 {
+	font: normal normal 700 18px/24.51px "Open Sans";
+	padding: 10.26px 0px;
+	margin: 20px 0px;
+}
+.social__content p {
+	font: normal normal 400 14px/16px "Raleway";
+}
+
+.social__media { /* Подраздел "Иконки"  */
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.social__media a, img {
+	width: 26px;
+	height: 26px;
+}
+} 
+
+
+

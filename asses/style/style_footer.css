@@ -1,0 +1,115 @@
+/* Блок "Подвал" */
+.footer {
+	width: 100%;
+	background: #000000;
+}
+
+
+/* Раздел "Иконки" */
+.footer__icons {
+	margin: 0 auto;
+	padding-top: 12.7px;
+   padding-bottom: 12.7px;
+}
+.footer__icon {
+	width: 593px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	cursor: pointer;
+}
+.footer__icon img {
+	width: 53.2px;
+	height: 53.2px;
+}
+.footer__icon a {
+	width: 53.2px;
+	height: 53.2px;
+}
+
+/* Раздел "Содержание" */
+.footer__media {
+	margin: 0 auto;
+}
+.footer__media-text {
+	display: flex;
+	justify-content: center;
+	padding-top: 19.44px;
+   padding-bottom: 19.44px;
+}
+.footer__media-text p {
+	font: normal normal 400 18px/21.13px "Raleway";
+	text-align: center;
+	color: #FFFFFF;
+	margin: 0px;
+}
+
+
+@media only screen and (min-width: 1170px) { 
+	.footer__icons,
+	.footer__media {
+		width: 1170px;
+	}
+	.footer__icon {
+		width: 593px;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1170px)  { 
+	.footer__icons {
+		width: 922px;
+		padding-top: 14.7px;
+		padding-bottom: 14.8px;
+	}
+	.footer__media {
+		width: 922px;
+	}
+
+	.footer__icon { /* Раздел "Иконки" */
+		width: 593px;
+	}
+	.footer__icon img {
+		width: 45px;
+		height: 45px;
+	}
+	.footer__icon a {
+		width: 45px;
+		height: 45px;
+	}
+	.footer__media-text { /* Раздел "Содержание" */
+		padding-top: 21.77px;
+		padding-bottom: 21.8px;
+	}
+	.footer__media-text p {
+		font: normal normal 400 14px/16.44px "Raleway";
+	}
+}
+
+@media only screen and (min-width: 288px) and (max-width: 1023px) {
+	.footer__icons {
+		width: 288px;
+		padding-top: 19.5px;
+		padding-bottom: 19.5px;
+	}
+	.footer__media {
+		width: 288px;
+	}
+
+	.footer__icon { /* Раздел "Иконки" */
+		width: 293px;
+	}
+	.footer__icon img {
+		width: 26px;
+		height: 26px;
+	}
+	.footer__icon a {
+		width: 26px;
+		height: 26px;
+	}
+	.footer__media-text { /* Раздел "Содержание" */
+		padding-top: 21.77px;
+		padding-bottom: 21.8px;
+	}
+	.footer__media-text p {
+		font: normal normal 400 14px/16.44px "Raleway";
+	}
+}

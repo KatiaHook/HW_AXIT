@@ -1,0 +1,166 @@
+/* Блок "Контакты" */
+.about {
+	width: 100%;
+	margin-bottom: 60px; 
+}
+
+/* Раздел "Заголовок с линеей" */
+.about__block {
+	margin: 0 auto;
+	padding-top: 61.11px;
+	padding-bottom: 61.11px;
+}
+.about__heading {
+	display: flex;
+	flex-flow: column nowrap;
+}
+.about__title {
+	height: 150px;
+	justify-content: center;
+}
+.about__title h2 {
+	font: normal normal 400 36px/42.26px "Raleway";
+	text-align: center;
+	text-transform: uppercase; /* Задать высоту текста */
+}
+.about__line {
+	width: 170px;
+	border-bottom: 1px solid #EC7979;
+	margin-left: auto;
+	margin-right: auto;
+}
+.about__subtitle p {
+	font: normal normal 400 18px/21px "Raleway";
+	text-align: center;
+	color: #86878B;
+}
+
+/* Раздел "Сетка карточек" */
+.about__net-cards {
+	width: 1170px;
+	margin: 0 auto;
+}	
+.about__cards {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.about__card {
+	width: 370px;
+	height: 383px;
+	text-align: center;
+	display: inline-block;
+}
+.about__card img { 
+	width: 170px;
+	height: 170px;
+	object-fit: cover;  /* Что бы img не искажался */
+	display: flex;
+	margin-left: 100px;
+}
+.about__card h4 {
+	font: normal normal 700 24px/32.68px "Open Sans";
+	padding: 33.67px 50px;
+	margin: 0px;
+	display: flex;
+	justify-content: center;
+}
+.about__card p {
+	font: normal normal 400 18px/21.13px "Raleway";
+	height: 105px;
+	margin: 3px;
+	display: flex;
+}
+
+
+@media only screen and (min-width: 1170px) { 
+	.about__block {
+		width: 1170px;
+	}
+}
+@media only screen and (min-width: 1022px) and (max-width: 1170px)  { 
+	.about__block {
+		width: 992px;
+	}
+	.about__net-cards {
+		width: 992px;
+	}	
+
+.about__title { /* Раздел "Заголовок с линеей" */
+	height: 120px;
+}
+.about__title h2 {
+	font: normal normal 400 24px/28.18px "Raleway";
+}
+.about__line {
+	width: 143px;
+}
+.about__subtitle p {
+	font: normal normal 400 14px/16px "Raleway";
+}
+
+.about__card { /* Раздел "Сетка карточек" */
+	width: 318px;
+	height: 310px;
+}
+.about__card img { 
+	width: 147px;
+	height: 147px;
+	margin-left: 85px;
+}
+.about__card h4 {
+	font: normal normal 700 18px/24.51px "Open Sans";
+	padding: 28.76px 50px;
+}
+.about__card p {
+	font: normal normal 400 14px/16.44px "Raleway";
+	height: 64px;
+	margin: 0px;
+}
+}
+@media only screen and (min-width: 288px) and (max-width: 1023px) {
+	.about__block {
+		margin: 0 auto;
+		padding-top: 0px;
+		padding-bottom: 5px;
+	}
+	.about__block {
+		width: 288px;
+	}
+	.about__net-cards {
+		width: 288px;
+		flex-flow: column nowrap;
+	}	
+
+	.about__title { /* Раздел "Заголовок с линеей" */
+		height: 120px;
+	}
+	.about__title h2 { /* Раздел "Заголовок с линеей" */
+		font: normal normal 400 24px/28.18px "Raleway";
+	}
+	.about__line {
+		width: 134px;
+	}
+	.about__subtitle p {
+		font: normal normal 400 14px/16.44px "Raleway";
+	}
+
+	.about__card { /* Раздел "Сетка карточек" */
+		width: 288px;
+		height: 318px;
+	}
+	.about__card img { 
+		width: 147px;
+		height: 147px;
+		margin-left: 65px;
+	}
+	.about__card h4 {
+		font: normal normal 700 18px/24.51px "Open Sans";
+		padding: 27.76px 0px;
+	}
+	.about__card p {
+		font: normal normal 400 14px/16.44px "Raleway";
+		height: 80px;
+		margin: 3px;
+	}
+} 

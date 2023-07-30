@@ -1,0 +1,205 @@
+/* Блок "Обзоры" */
+.reviews {
+	width: 100%;
+	margin-bottom: 60px; 
+}
+
+/* Раздел "Отзывы людей" */
+.reviews__people {
+	width: 1170px;
+	margin: 0 auto;
+}
+.reviews__contents {
+	display: flex;
+	justify-content: space-between;
+}
+.review__content {
+	width: 370px;
+	height: 336px;
+}
+.review__text {
+	background-color: #E2E2E2;
+	height: 105px;
+	padding: 37.5px 0px 37.5px 0px;
+	border-radius: 10px;
+	margin: 0px;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.review__text p {
+	font: normal normal 400 18px/21.13px "Raleway";
+	text-align: center;
+	color: #86878B;
+	height: 105px;
+}
+.review__text::after { /* Настроки треугольника */
+	content:'';
+	width: 1.2px;
+	height: 0;
+	border-left: 15px solid rgba(0, 0, 0, 0);
+	border-right: 15px solid rgba(0, 0, 0, 0);
+	border-top: 20px solid #E2E2E2;
+	position: absolute;
+	top: 100%;
+	left: 70px;
+}
+.review__image {
+	padding-top: 86px;
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.review__image-info { 
+	height: 70px;
+	display: flex;
+	flex-flow: column nowrap;
+	flex-basis: 270px; /* Задать исходный размер flex-элемента */
+	justify-content: center;
+}
+.review__image-info h3 {
+	font: normal normal 700 24px/32.68px "Open Sans";
+	padding: 10.67px 0px 10.67px 0px;
+	margin: 0px;
+}
+.review__image-info p {
+	font: normal normal 400 18px/21px "Raleway";
+	padding: 0px;
+	margin: 0px;
+}
+
+.reviews__slider { /* Настроки для CЛАЙДЕРА */
+	display: none;
+}
+.reviews__slider input {
+	display: none;
+}
+.review__image-slider {
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.review__image-slider img {
+	width: 57px;
+	height: 57px;
+}
+.review__image-info-slider { 
+	height: 70px;
+	display: flex;
+	flex-flow: column nowrap;
+	flex-basis: 204px;
+	justify-content: center;
+}
+.review__image-info-slider h3 {
+	font: normal normal 700 14px/19.07px "Open Sans";
+	padding: 10.44px 0px 10.5px 0px;
+	margin: 0px;
+}
+.review__image-info-slider p {
+	font: normal normal 400 13px/15.26px "Raleway";
+	padding: 0px;
+	margin: 0px;
+}
+
+
+@media only screen and (min-width: 1170px) { 
+	.reviews__people {
+		max-width: 1170px;
+	}
+}
+@media only screen and (min-width: 1022px) and (max-width: 1170px)  { 
+	.reviews__people {
+		width: 992px;
+	}
+	.review__content { 
+		width: 317px;
+	}
+	.review__text {
+		height: 180px;
+		padding: 0px;
+	}
+	.review__text p {
+		font: normal normal 400 14px/16.44px "Raleway";
+		height: 80px;
+	}
+	.review__text::after { /* Настроки треугольника */
+		border-left: 12.3px solid rgba(0, 0, 0, 0);
+		border-right: 12.3px solid rgba(0, 0, 0, 0);
+		left: 60px;
+	}
+	.review__image img {
+		width: 63.4px;
+		height: 63px;
+	}
+	.review__image-info { 
+		flex-basis: 230px; /* Задать исходный размер flex-элемента */
+	}
+	.review__image-info h3 {
+		font: normal normal 700 18px/24.51px "Open Sans";
+		padding: 5.76px 0px;
+	}
+	.review__image-info p {
+		font: normal normal 400 14px/16px "Raleway";
+	}
+}
+@media only screen and (min-width: 288px) and (max-width: 1023px) {
+	.reviews {
+		margin-bottom: 30px; 
+	}
+	.reviews__slider {
+		width: 288px;
+		margin: 0 auto;
+		display: flex;
+		flex-flow: column-reverse wrap;
+		position: relative;
+	}
+	.review__content { /* Настроить вкладки СЛАЙДЕРА */
+		width: 288px;
+		height: 136px;
+		position: relative;
+	}
+	.review__content:has(.review__text, .review__image-slider) { /* Отобразить контент ОДНОЙ вкладки */
+		display: none;
+		width: 288px;
+		height: 316px;
+	} 
+	#slider-1:checked ~ #slider__content-1,
+	#slider-2:checked ~ #slider__content-2,
+	#slider-3:checked ~ #slider__content-3 {  /* Переключить вкладки */
+		display: block;
+	}
+	.reviews__controls {
+		display: flex;
+		margin-left: 66px;
+		position: absolute;
+	}
+	.slider__title {
+		width: 9px;
+		height: 9px;
+		outline: 1px solid gray;
+		background-color: #ffff;
+		border-radius: 50%;
+		margin: 0 20px;
+	}
+	#slider-1:checked ~ .reviews__controls > .slider-label-1 {
+		background-color: gray;
+	}
+	#slider-2:checked ~ .reviews__controls > .slider-label-2 {
+		background-color: gray;
+	}
+	#slider-3:checked ~ .reviews__controls > .slider-label-3 {
+		background-color: gray;
+	}
+
+	.review__text {
+		height: 80px;
+		padding: 50px 0px;
+	}
+	.review__text p {
+		font: normal normal 400 14px/16.44px "Raleway";
+		height: 80px;
+	}
+}
